@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #585858;
+}
+
+*, /* computation algorithm */ 
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* container */ 
+.container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* header */ 
+.header {
+    height: 85px; /* refactor */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 85px;
+}
+
+/* nav */ 
+.nav {
+    display: flex;
+    font-size: 15px;
+    height: 100%;
+}
+.nav__link {
+    display: flex; /* in order to set paddings */ 
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__link.active {
+    background-color: #004af2; 
+}

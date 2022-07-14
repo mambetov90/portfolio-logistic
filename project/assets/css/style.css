@@ -7,10 +7,24 @@ body {
     color: #585858;
 }
 
-*, /* computation algorithm */ 
+*,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* container */ 
@@ -23,8 +37,15 @@ body {
 
 /* header */ 
 .header {
-    height: 85px; /* refactor */
+    width: 100%;
+
     background-color: rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .header__inner {
@@ -44,11 +65,203 @@ body {
 .nav__link {
     display: flex; /* in order to set paddings */ 
     align-items: center;
-    padding: 0 10px;
+    padding: 0 15px;
     color: #fff;
     text-decoration: none;
 }
 
 .nav__link.active {
     background-color: #004af2; 
+}
+
+/* Intro */
+.intro {
+    height: 600px;
+    margin-bottom: 30px;
+    background: #000 url("../img/photo\ bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.intro__inner {
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.intro__text {
+    text-align: right;
+    margin-bottom: 45px;
+}
+
+.intro__countries {
+    font-size: 15px;
+    color: #fff;
+} 
+
+.intro__title {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 110px;
+    line-height: 0.9 ;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+}
+
+.intro__title-amp {
+  font-size: 170px; 
+  line-height: 1;
+  font-weight: 900; 
+  color: rgba(255, 255, 255, 0.2);
+
+  position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+/* Request form */
+.request-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #004AF2;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.request-form--intro{
+    position: relative;
+    bottom: -30px;
+}
+
+.request-form__header {
+    padding: 20px 30px;
+    background-color: #033FC9;
+}
+
+.request-form__title{
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.request-form__text {
+    font-size: 15px;
+    color: #fff;
+}
+
+ .request-form__content {
+     padding: 30px;
+ }
+
+ /* Form */
+ .form-group {
+     margin-bottom: 25px;
+ }
+
+ .input {
+     display: block;
+     width: 100%;
+     padding-bottom: 12px;
+     padding-left: 50px;
+
+     background: none;
+     border: none;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+     font-family: 'PT Sans', sans-serif;
+     font-size: 16px;
+     color: #fff;
+
+     transition: border-color .1s linear;
+ }
+
+ .input::placeholder {
+     color: #fff;
+ }
+
+ .input:focus {
+     outline: none;
+     border-bottom-color: #fff;
+ }
+
+ .input--user {
+     background: url("../img/input-person.svg") 
+     left 15px top 5px no-repeat;
+ }
+
+ .input--phone {
+    background: url("../img/input-call.svg") 
+    left 15px top 5px no-repeat;
+}
+
+.input--email {
+    background: url("../img/input-mail.svg") 
+    left 15px top 6px no-repeat;
+}
+
+ /* Btn */
+
+ .btn {
+     display: inline-block;
+     vertical-align: top;
+    padding: 11px 20px;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    text-align: center;
+
+    background: #333;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+ }
+
+ .btn--block {
+    display: block;
+    width: 100%;
+ }
+
+ .btn--orange {
+    background-image: 
+    linear-gradient(to right, #FF903E,#ff2c2c);
+ }
+ /* Section */
+ .section {
+     padding: 60px 0;
+ }
+
+  /* Services */
+ .services {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 25px 0;
+     background-color: #fff;
+     border-radius: 5px;
+     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+ }
+
+ .services__item {
+    max-width: 25%;
+    padding: 0 25px;
+    margin-bottom: 30px;
+}
+.services__title {
+    font-family: 'Lato' sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #2c2c2c;
+    font-weight: 900;
+    margin-bottom: 20px ;
+}
+.services__text {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #585858;
+    margin-bottom: 20px ;
 }

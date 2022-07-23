@@ -1,5 +1,7 @@
 :root {
   --main-color: #fff;
+  --secondary-color: #004af2;
+  --thirdy-color: #585858;
 }
 body {
   margin: 0;
@@ -7,7 +9,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  color: #585858;
+  color: var(--thirdy-color);
 }
 
 *,
@@ -36,6 +38,12 @@ ol {
   list-style: none;
 }
 
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* container */
 .container {
   width: 100%;
@@ -54,7 +62,7 @@ ol {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .header__inner {
@@ -80,7 +88,7 @@ ol {
 }
 
 .nav__link.active {
-  background-color: #004af2;
+  background-color: var(--secondary-color);
 }
 
 /* Intro */
@@ -105,7 +113,7 @@ ol {
 
 .intro__countries {
   font-size: 15px;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .intro__title {
@@ -134,7 +142,7 @@ ol {
 .request-form {
   width: 100%;
   max-width: 400px;
-  background-color: #004af2;
+  background-color: var(--secondary-color);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -211,7 +219,7 @@ ol {
 /* Btn */
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   vertical-align: top;
   padding: 15px 45px;
   vertical-align: middle;
@@ -265,7 +273,7 @@ ol {
   position: relative;
   flex-wrap: wrap;
   padding: 30px 0 50px;
-  background-color: #fff;
+  background-color: var(--main-color);
   border-radius: 5px;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
 }
@@ -301,7 +309,7 @@ ol {
 .services__text {
   font-size: 15px;
   line-height: 1.4;
-  color: #585858;
+  color: var(--thirdy-color);
   margin-bottom: 15px;
 }
 .services__footer {
@@ -310,7 +318,7 @@ ol {
 .services__link {
   display: inline-block;
   font-size: 15px;
-  color: #004af2;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.1s linear;
 }
@@ -319,7 +327,7 @@ ol {
   display: block;
   width: 10px;
   height: 2px;
-  background-color: #004af2;
+  background-color: var(--secondary-color);
   transition: width 0.1s linear;
 }
 .services__link:hover {
@@ -401,7 +409,7 @@ ol {
   color: #2c2c2c;
 }
 .reviews__content {
-  color: #585858;
+  color: var(--thirdy-color);
   font-size: 15px;
   line-height: 1.8;
 }
@@ -410,4 +418,65 @@ ol {
 }
 .reviews__content p:first-child {
   text-indent: 20px;
+}
+/* Benefits */
+.benefits {
+  display: flex;
+}
+.benefits__col {
+  width: 50%;
+}
+
+.benefits-list {
+  width: 100%;
+  max-width: 370px;
+  padding-left: 50px;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    var(--main-color) 50%,
+    #a5a5a5 50%
+  );
+  background-size: 2px 40px;
+  background-repeat: repeat-y;
+  background-position: left 12px top 29px;
+}
+.benefits-list:before,
+.benefits-list:after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 36px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.benefits-list:before {
+  background-image: url("../img/pin-1.svg");
+  top: -5px;
+  background-color: var(--main-color);
+}
+.benefits-list:after {
+  background-image: url("../img/pin.svg");
+  bottom: -35px;
+}
+
+.benefits-list__item {
+  margin-bottom: 35px;
+}
+.benefits-list__item:last-child {
+  margin-bottom: 0;
+}
+.benefits-list__title {
+  margin-bottom: 12px;
+  font-family: "Lato", sans-serif;
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 900;
+}
+.benefits-list__text {
+  font-size: 15px;
+  color: var(--thirdy-color);
+  line-height: 1.4;
 }

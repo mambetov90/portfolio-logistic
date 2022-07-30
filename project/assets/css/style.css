@@ -11,13 +11,11 @@ body {
   line-height: 1.4;
   color: var(--thirdy-color);
 }
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -37,17 +35,14 @@ ol {
   padding: 0;
   list-style: none;
 }
-
 .text-center {
   text-align: center;
 }
-
 .img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 /* container */
 .container {
   width: 100%;
@@ -55,7 +50,6 @@ ol {
   margin: 0 auto;
   padding: 0 15px;
 }
-
 /* header */
 .header {
   width: 100%;
@@ -102,19 +96,16 @@ ol {
   background: #000 url("../img/photo\ bg.jpg") no-repeat center;
   background-size: cover;
 }
-
 .intro__inner {
   height: 600px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
-
 .intro__text {
   text-align: right;
   margin-bottom: 45px;
 }
-
 .intro__countries {
   font-size: 15px;
   color: var(--main-color);
@@ -128,20 +119,16 @@ ol {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
 }
-
 .intro__title-amp {
   font-size: 170px;
   line-height: 1;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.2);
-
   position: absolute;
   right: 0;
   top: 50%;
-
   transform: translateY(-50%);
 }
-
 /* Request form */
 .request-form {
   width: 100%;
@@ -150,7 +137,6 @@ ol {
   border-radius: 5px;
   overflow: hidden;
 }
-
 .request-form--intro {
   position: relative;
   bottom: -30px;
@@ -187,39 +173,30 @@ ol {
   width: 100%;
   padding-bottom: 12px;
   padding-left: 50px;
-
   background: none;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   color: var(--main-color);
-
   transition: border-color 0.1s linear;
 }
-
 .input::placeholder {
   color: var(--main-color);
 }
-
 .input:focus {
   outline: none;
   border-bottom-color: var(--main-color);
 }
-
 .input--user {
   background: url("../img/input-person.svg") left 15px top 5px no-repeat;
 }
-
 .input--phone {
   background: url("../img/input-call.svg") left 15px top 5px no-repeat;
 }
-
 .input--email {
   background: url("../img/input-mail.svg") left 15px top 6px no-repeat;
 }
-
 /* Btn */
 .btn {
   display: inline-block;
@@ -227,62 +204,49 @@ ol {
   padding: 15px 45px;
   position: relative;
   overflow: hidden;
-
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 1.1;
-  color: #fff;
+  color: var(--main-color);
   font-weight: 700;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-
   background: #333;
   border: 0;
   border-radius: 5px;
-
   transition: background 0.2s linear;
 }
-
 .btn:before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-
   background-color: #000;
   opacity: 0;
-
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-
   transition: opacity 0.1s linear;
 }
-
 .btn span {
   position: relative;
   z-index: 2;
 }
-
 .btn:hover:before {
   opacity: 0.15;
 }
-
 .btn--block {
   display: block;
   width: 100%;
 }
-
 .btn--orange {
   background-image: linear-gradient(to right, #ff903e, #ff2c2c);
 }
-
 .btn--shadow {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
-
 /* Section */
 .section {
   padding: 60px 0;
@@ -329,7 +293,6 @@ ol {
   pointer-events: none;
   z-index: 1;
 }
-
 .services__item {
   max-width: 25%;
   display: flex;
@@ -376,7 +339,6 @@ ol {
   background-color: #fd665a;
 }
 /* Clients */
-
 .clients {
   display: flex;
   margin-bottom: 65px;
@@ -464,7 +426,6 @@ ol {
 .benefits__col {
   width: 50%;
 }
-
 .benefits-list {
   width: 100%;
   max-width: 370px;
@@ -499,7 +460,6 @@ ol {
   background-image: url("../img/pin.svg");
   bottom: -35px;
 }
-
 .benefits-list__item {
   margin-bottom: 35px;
 }
@@ -647,4 +607,43 @@ ol {
   display: block;
   font-size: 12px;
   color: #6e6e6e;
+}
+/* Footer */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  margin-top: 60px;
+  background-image: url("../img/tire-left.svg"), url("../img/tire-right.svg");
+  background-repeat: no-repeat;
+  background-position: left -50px bottom -80px, right -50px bottom -80px;
+  text-align: center;
+}
+.footer__contacts {
+  margin: 25px 0;
+  text-align: center;
+  color: var(--thirdy-color);
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+}
+.footer__contacts p {
+  margin: 0 0 5px;
+}
+.footer__contacts a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer__contacts a:hover {
+  text-decoration: underline;
+}
+.footer__nav {
+  font-size: 12px;
+}
+.footer__nav a {
+  margin: 0 5px;
+  color: #004af2;
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  text-decoration: underline;
 }

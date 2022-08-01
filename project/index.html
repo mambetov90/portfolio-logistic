@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logistic</title>
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
@@ -460,5 +461,92 @@
         </nav>
       </div>
     </footer>
+    <!-- Modals -->
+    <div class="modal" id="becomeClientModal" style="display: none">
+      <div class="modal__inner">
+        <div class="modal__header">
+          <h4 class="modal__title">Need to deliver your cargo? We can help!</h4>
+          <div class="modal__text">
+            <p>Fill a little form and we will call you back!</p>
+          </div>
+        </div>
+        <div class="request-form__content">
+          <form action="/" method="post">
+            <div class="form-group">
+              <input
+                class="input input--dark input--user"
+                type="text"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="input input--dark input--phone"
+                type="tel"
+                placeholder="Your phone"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="input input--dark input--email"
+                type="email"
+                placeholder="Your email"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn--block btn--shadow btn--orange"
+            >
+              <span>Call me back</span>
+            </button>
+          </form>
+          <div class="modal__footer">
+            <h4 class="modal__footer-title">Our contacts</h4>
+            <address class="modal__contacts">
+              <p>New York, Street, ZIP code</p>
+              <p>Phone: <a href="tel:+9832476235427"></a>+9832476235427</p>
+              <p>
+                Email:
+                <a href="mailto:hello@centerlogistic.com">
+                  hello@centerlogistic.com
+                </a>
+              </p>
+            </address>
+          </div>
+          <button class="modal__close" type="button">
+            <img src="assets/img/close.svg" alt="Close" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="thanksModal" style="display: none">
+      <div class="modal__inner">
+        <div class="modal__header">
+          <img class="modal__icon" src="assets/img/tick.svg" alt="" />
+          <h4 class="modal__title">Thanks for your request</h4>
+          <div class="modal__text">
+            <p>We call you back as soon as possible!</p>
+          </div>
+        </div>
+
+        <div class="modal__footer">
+          <h4 class="modal__footer-title">Our contacts</h4>
+          <address class="modal__contacts">
+            <p>New York, Street, ZIP code</p>
+            <p>Phone: <a href="tel:+9832476235427"></a>+9832476235427</p>
+            <p>
+              Email:
+              <a href="mailto:hello@centerlogistic.com">
+                hello@centerlogistic.com
+              </a>
+            </p>
+          </address>
+        </div>
+        <button class="modal__close" type="button">
+          <img src="assets/img/close.svg" alt="Close" />
+        </button>
+      </div>
+    </div>
   </body>
 </html>
